@@ -32,7 +32,7 @@ RUN mkdir -p /config && \
     if [[ $(uname -m) == "x86_64" ]]; then \
       apk add --no-cache gcompat && \
       cd /usr/share && \
-      curl -L https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 | tar xj && \
+      curl -L https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2 | tar xj && \
       mv /usr/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs phantomjs && \
       rm -rf /usr/share/phantomjs-2.1.1-linux-x86_64 && \
       ln -s /usr/share/phantomjs /usr/bin/phantomjs && \
